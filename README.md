@@ -1,9 +1,9 @@
 # owlapi-repeat-model-load
 
-This repo contains testcodes that tests [the memory leak issue](https://github.com/owlcollab/owltools/issues/253#issuecomment-388415035). It consists of four [noctua-model](https://github.com/geneontology/noctua-models) files; the codes will load them using the same ontology manager in owlapi and prints out its memory usages.
+This repo contains testcodes that tests [the memory leak issue](https://github.com/owlcollab/owltools/issues/253#issuecomment-388415035). It consists of four [noctua-model](https://github.com/geneontology/noctua-models) files; the codes will load them using the same ontology manager in owlapi and prints out its memory usages. Most codes are extracted from owltools for reproducing this issue.
 
 ## Installation and Usage
-Run the following commands for building and running the executable jar file.  
+Please run the following commands for building and running the executable jar file. See the lines with `heap free size`, i.e. there will be four such lines in the output.
 ~~~~
 mvn clean package
 java -jar target/owlapitest-0.0.1-SNAPSHOT-jar-with-dependencies.jar 2>&1 | tee output.txt
